@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Es_07_Form</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form action="demo.php" method="post">
+      <h1>Registrati al nostro sito web</h1>
+
+      <div>
+        <label for="email"> Email</label>
+        <input type="email" id="email" name="usermail" autofocus />
+      </div>
+      <br />
+      <div>
+        <label for="keyword"> Password</label>
+        <input type="password" id="keyword" name="password" />
+      </div>
+      <br />
+      <div>
+        <label for="name"> Nome e cognome</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <br />
+      <div>
+        <label for="date">Data di nascita</label>
+        <input type="date" id="date" min="1980-01-01" max="2020-12-31" />
+      </div>
+      <br />
+      <div>
+        <label for="phone">Numero di telefono</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        />
+      </div>
+      <br />
+      <div>
+        <label for="subscription-plan"> Piano di abbonamento</label>
+        <select id="subscription-plan" name="subscription-plan">
+          <option value="0">Free</option>
+          <optgroup label="A pagamento">
+            A pagamento
+            <option value="1599">15.99$/mese</option>
+            <option value="3099">30.99$/mese</option>
+            <option value="5099">50.99$/mese</option>
+          </optgroup>
+        </select>
+      </div>
+      <br />
+      <div>
+        <label for="pro-plan"
+          >Vantaggi Pro
+          <input type="checkbox" id="pro-plan" name="pro-plan" />
+        </label>
+      </div>
+      <br />
+      <div>
+        <label for="number-cc">Numero Carta</label>
+        <input type="text" id="number-cc" name="cc" pattern="[0-9]{13,19}"/>
+        <label for="cvc">CVC</label>
+        <input type="text" id="cvc" name="cvc" pattern="[0-9]{3,4}"/>
+        <label for="scadenza-cc">Scadenza</label>
+        <input
+          type="date"
+          id="scadenza-cc"
+          name="scadenza"
+          min="2022-12-12"
+          max="2052-12-12"
+        />
+        <label for="indirizzo-cc">Indirizzo di fatturazione</label>
+        <input type="text" id="indirizzo-cc" name="indirizzo" />
+      </div>
+      <br />
+      <div>
+        <button type="submit">Registrati</button>
+      </div>
+    </form>
+  </body>
+</html>
